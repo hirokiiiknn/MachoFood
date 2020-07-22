@@ -1,0 +1,51 @@
+-# !!!
+-# %html
+-#   %head
+-#     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+-#     %title Pictweet
+-#     = csrf_meta_tags
+-#     = csp_meta_tag
+-#     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+-#     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+-#   %body
+-#     %header.header
+-#       .header__bar.row
+-#         %h1.grid-6
+-#           %a{:href => "/"} PicTweet
+-#         .user_nav.grid-6
+-#           %a.post{:href => "/tweets/new"} 投稿する
+-#     = yield
+-#     %footer
+-#       %p
+-#         Copyright PicTweet 2019.
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title MachoFood
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    %link{:href => "https://fonts.googleapis.com/css2?family=Ranchers&display=swap", :rel => "stylesheet"}/
+
+  %body
+    .header
+      .header__child
+        .header__child--logo
+          = link_to "/" do
+            %h1 Macho Food
+            %i.fab.fa-meetup
+      .header__list
+        %ul.header__list--icon
+          %li.icons 
+            = link_to "/" do
+              %i.fas.fa-user-astronaut
+          %li.icons
+            = link_to "/" do 
+              %i.fas.fa-search
+    = yield
+    .footer
+      %p
+        Copyright 2020 machofood
+      

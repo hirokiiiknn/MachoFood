@@ -1,0 +1,45 @@
+.header{
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  &__child{
+    background-color: khaki;
+    padding: 10px;
+    &--logo{
+      a{
+        text-decoration: none;
+        display: flex;
+        h1{
+          font-family: 'Ranchers', cursive;
+          font-size: 25px;
+          color: black;
+          text-decoration: none;
+        }
+        i{
+          padding-top: 4px;
+          font-size: 25px;
+          color: black;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &__list{
+    &--icon{
+      display: flex;
+      padding: 10px;
+      .icons{
+        font-size: 18px;
+        margin-right: 15px;
+        a{
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
+  }
+
+.footer{
+  background-color: red;
+}
