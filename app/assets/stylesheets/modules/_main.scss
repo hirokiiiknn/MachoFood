@@ -28,12 +28,36 @@
     &--icon{
       display: flex;
       padding: 10px;
-      .icons{
-        font-size: 18px;
-        margin-right: 15px;
-        a{
+      .user{
+        display: flex;
+        .icons{
+          font-size: 18px;
+          margin-right: 15px;
+          a{
+            text-decoration: none;
+            color: white;
+          }
+        }
+        logout{
+          font-family: 'Ranchers', cursive;
+          font-family: 'Rowdies', cursive;
+          font-family: 'Staatliches', cursive;
+          padding-left: 20px;
+          padding-right: 10px;
+          a{
+            text-decoration: none;
+            color: white;
+          }
+        }
+      }
+      .user_grid{
+        .post{
+          font-family: 'Ranchers', cursive;
+          font-family: 'Rowdies', cursive;
+          font-family: 'Staatliches', cursive;
           text-decoration: none;
           color: white;
+          margin-right: 20px;
         }
       }
     }
@@ -53,49 +77,70 @@ ul li {
   padding: 0;
   margin: 0;
 }
+
+
+.recipe{
+  display: flex;
+  h1{
+    font-size: 50px;
+    font-family: 'Ranchers', cursive;
+    padding: 10px;
+  }
+  i{
+    font-size: 44px;
+    background-color: lawngreen;
+    padding: 19px;
+  }
+
+
+}
 @media screen and (min-width:600px){
 .row {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  max-width: 1000px;
-  *zoom: 1;
+  max-width: 1400px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap;
   height: 100%;
+  
 }}
-div.contents.row div.content_post {
+
+.content_post {
   margin: 20px 0;
   padding: 30px;
   position: relative;
-  height: 300px;
-  width: 300px;
+  height: 200px;
+  width: 200px;
   color: #fff;
   background-size: cover;
   background-position: center center;
-  border-radius: 3px;
+  border-radius: 10px;
   box-shadow: 0 0 10px rgba(41,41,41,0.2);
+  p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: absolute;
+    left: 30px;
+    right: 100px;
+    bottom: 30px;
+    margin: 0;
+    color: black;
+    z-index: 2;
+    background-color: white;
+    opacity: 0.5;
+    padding: 5px 30px 5px 30px;
+  }
+  p2 {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    font-size: 20px;
+    text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000;
+  }
+  span.name {
+    color: black;
+    font-size: 13px;
+  }
 }
-div.contents.row div.content_post p {
-  position: absolute;
-  left: 30px;
-  right: 100px;
-  bottom: 30px;
-  margin: 0;
-  font-size: 20px;
-  z-index: 2;
-  font-weight: bold;
-  text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000;
-}
-div.contents.row div.content_post span.name {
-  // position: absolute;
-  // right: 30px;
-  // bottom: 30px;
-  // z-index: 2;
-  color: black;
-  font-size: 13px;
-}
+
+

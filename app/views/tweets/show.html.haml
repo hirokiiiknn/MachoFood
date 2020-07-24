@@ -1,0 +1,14 @@
+.contents.row
+  .content_post{:style => "background-image: url(#{@tweet.image});"}
+    - if user_signed_in? && current_user.id == @tweet.user_id
+      .more
+        %ul.more_list
+          %li
+            = link_to(content_tag(:i, nil, class: 'fas fa-edit'),edit_tweet_path(@tweet.id),method: :get)
+          %li
+            = link_to(content_tag(:i, nil, class: 'fas fa-trash-alt'),tweet_path(@tweet.id),method: :delete,data: { confirm: '本当に削除しますか？' }) 
+    %p= @tweet.text
+    %p2= @tweet.title
+    %span.name
+      = @tweet.name
+      = link_to(content_tag(:i, nil, class: 'fas fa-arrow-alt-circle-down'),tweets_path(@tweet.id),method: :get)
