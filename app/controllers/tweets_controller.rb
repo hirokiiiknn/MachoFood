@@ -3,7 +3,7 @@ class TweetsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.includes(:user).order("created_at DESC")
   end
 
   def new 
@@ -32,7 +32,7 @@ class TweetsController < ApplicationController
 
   private
   def tweet_params
-    params.require(:tweet).permit(:name, :text, :image, :title).merge(user_id: current_user.id)
+    params.require(:tweet).permit(:text, :image, :title).merge(user_id: current_user.id)
   end
 
   def hoge_tweet
