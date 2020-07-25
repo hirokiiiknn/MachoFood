@@ -117,6 +117,7 @@ ul li {
   background-position: center center;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(41,41,41,0.2);
+
   p {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     position: absolute;
@@ -137,9 +138,13 @@ ul li {
     font-size: 20px;
     text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000;
   }
-  span.name {
+  p3{
+    background-color: lightseagreen;
+    font-size: 20px;
+    border-radius: 10px;
     color: black;
-    font-size: 13px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 2px #fff, 0 0 1px #fff, 0 0 1px #fff;
   }
 }
 
