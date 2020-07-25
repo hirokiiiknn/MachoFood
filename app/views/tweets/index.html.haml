@@ -1,6 +1,17 @@
+.recipe
+  %i.fas.fa-utensils
+  %h1 recipes
 .contents.row
   - @tweets.each do |tweet|
-    .content_post{:style => "background-image: url(#{tweet.image});"}
-      %p= tweet.text
-      %span.name
-        = tweet.name
+    = link_to tweet_path(tweet.id), method: :get do
+      .content_post{:style => "background-image: url(#{tweet.image});"}
+        %p= tweet.text
+        %p2= tweet.title
+        %span.name
+          = tweet.name
+        
+
+
+
+
+

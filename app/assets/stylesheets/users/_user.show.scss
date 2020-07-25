@@ -1,0 +1,15 @@
+.introduce{
+  padding: 20px;
+  display: flex;
+  &__name{
+    font-family: cursive;
+    margin-right: 10px;
+  }
+  &__edit{
+    a{
+      color: black;
+      text-decoration: none;
+    }
+
+  }
+}

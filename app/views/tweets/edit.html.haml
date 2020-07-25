@@ -1,5 +1,5 @@
 .new-tweet
-  %h1 NEW POST 
+  %h1 EDIT
   .new-tweet__content
     = form_with(model: @tweet, local: true) do |form|
       //form.htmlタグ名 :カラム名(tweetsテーブルに保存)
@@ -8,4 +8,3 @@
       = icon('fas', 'image', id: "i")
       = form.file_field :image, class: "image"
       = form.submit
-      %p  <br>STAY HUNGRY BE AESTHETIC
