@@ -11,3 +11,21 @@
     %p= @tweet.text
     %p2= @tweet.title
     = link_to(content_tag(:i, nil, class: 'fas fa-arrow-alt-circle-down'),tweets_path(@tweet.id),method: :get)
+    
+    .container
+      - if current_user
+        = form_with(model: [@tweet, @comment], local: true) do |form|
+          = form.text_area :text, placeholder: "write a comment", rows: "2"
+          = form.submit "SEND", class: "s"
+      - else
+        %p1 ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+    .comments
+      %h4 ＜comment＞
+      - if @comments
+        - @comments.each do |comment|
+          .comments__c
+            = link_to comment.user.nickname, "/users/#{comment.user_id}"
+            = comment.text 
+
+
+
