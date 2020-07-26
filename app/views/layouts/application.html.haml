@@ -34,10 +34,12 @@
               = link_to "LOG IN", new_user_session_path, class: "post"
               = link_to "SIGN UP", new_user_registration_path, class: "post"
           %li.icons
-            = link_to "/tweets" do 
+            = link_to search_tweets_path do
               %i.fas.fa-search
+              %input{:type => "text>\n</haml_block>", placeholder: "search"}/
+
     = yield
-    .footer
-      %p
-        Copyright 2020 machofood STAY HUNGRY BE AESTHETIC
+    -# .footer
+    -#   %p
+    -#     Copyright 2020 machofood STAY HUNGRY BE AESTHETIC
       

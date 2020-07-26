@@ -1,11 +1,44 @@
-.row{
-  .content_post{
-    .more{
-      .more_list{
-        a{
-          
-        }
-      }
+.content_post{
+  .more{
+    .more_list{
+      display: flex;
+      padding-bottom: 10px;
     }
+  }
+}
+.container{
+  margin-top: 220px;
+  padding: 10px;
+  background-color: khaki;
+  border-radius: 20px;
+  position: relative;
+  .s{
+    position: absolute;
+    top: 19px;
+    right: 7px;
+    border-radius: 10px;
+  }
+  p{
+    display: flex;
+    padding-top: 30px;
+    margin-top: 100px;
+
+  }
+  
+}
+.comments{
+  h4{
+    color: black;
+
+  }
+}
+.comments__c{
+  color: black;
+  a{
+    text-decoration: none;
+    background-color: lightgray;
+    border-radius: 20px;
+    color: black;
+    margin: 10px;
   }
 }
