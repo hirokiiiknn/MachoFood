@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_25_050425) do
+ActiveRecord::Schema.define(version: 2020_07_26_064934) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2020_07_25_050425) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "title", limit: 20
     t.integer "user_id"
+    t.index ["text"], name: "index_tweets_on_text"
   end
 
   create_table "users", force: :cascade do |t|

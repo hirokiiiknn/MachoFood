@@ -14,9 +14,9 @@
     
     .container
       - if current_user
-        = form_with(model: [@tweet, @comment], local: true) do |form|
-          = form.text_area :text, placeholder: "write a comment", rows: "2"
-          = form.submit "SEND", class: "s"
+        = form_with(model: [@tweet, @comment], local: true, class: "comment") do |form|
+          = form.text_area :text, placeholder: "write a comment", rows: "2", class: "form_input"
+          = form.submit "SEND", class: ".form__submit"
       - else
         %p1 ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
     .comments
