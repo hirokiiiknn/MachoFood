@@ -10,7 +10,7 @@
             = link_to(content_tag(:i, nil, class: 'fas fa-trash-alt'),tweet_path(@tweet.id),method: :delete,data: { confirm: '本当に削除しますか？' }) 
     %p= @tweet.text
     %p2= @tweet.title
-    = link_to(content_tag(:i, nil, class: 'fas fa-arrow-alt-circle-down'),tweets_path(@tweet.id),method: :get)
+    = render partial: 'tweets/tweets', locals: {tweet: @tweet}
     
     .container
       - if current_user

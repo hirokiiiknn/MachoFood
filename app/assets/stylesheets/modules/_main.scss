@@ -105,6 +105,11 @@ ul li {
   height: 100%;
   
 }}
+.row{
+  a{
+    text-decoration: none;
+  }
+}
 
 .content_post {
   margin: 20px 0;
@@ -119,10 +124,9 @@ ul li {
   box-shadow: 0 0 10px rgba(41,41,41,0.2);
 
   p {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
     position: absolute;
     left: 30px;
-    right: 100px;
     bottom: 30px;
     margin: 0;
     color: black;
@@ -130,6 +134,17 @@ ul li {
     background-color: white;
     opacity: 0.5;
     padding: 5px 30px 5px 30px;
+  }
+  p1{
+    font-size: 20px;
+    position: absolute;
+    left: 0px;
+    bottom: 30px;
+    margin: 0;
+    color: white;
+    background-color: black;
+    opacity: 0.5;
+    padding: 5px 1px 5px 11px;
   }
   p2 {
     position: absolute;
@@ -139,13 +154,58 @@ ul li {
     text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000;
   }
   p3{
-    background-color: lightseagreen;
+    background: linear-gradient(to right, lightgrey, white);
     font-size: 20px;
     border-radius: 10px;
     color: black;
     letter-spacing: 3px;
     text-shadow: 0 0 2px #fff, 0 0 1px #fff, 0 0 1px #fff;
   }
+  pp {
+    font-size: 20px;
+    position: absolute;
+    left: 30px;
+    bottom: 70px;
+    margin: 0;
+    color: black;
+    z-index: 2;
+    background-color: white;
+    opacity: 0.5;
+    padding: 5px 30px 5px 30px;
+  }
+  pF{
+    font-size: 20px;
+    position: absolute;
+    left: 0px;
+    bottom: 70px;
+    margin: 0;
+    color: white;
+    background-color: black;
+    opacity: 0.5;
+    padding: 5px 1px 5px 11px;
+  }
+  ppp {
+    font-size: 20px;
+    position: absolute;
+    left: 30px;
+    bottom: 110px;
+    margin: 0;
+    color: black;
+    z-index: 2;
+    background-color: white;
+    opacity: 0.5;
+    padding: 5px 30px 5px 30px;
+  }
+  pC{
+    font-size: 20px;
+    position: absolute;
+    left: 0px;
+    bottom: 110px;
+    margin: 0;
+    color: white;
+    background-color: black;
+    opacity: 0.5;
+    padding: 5px 1px 5px 11px;
+  }
 }
-
 
