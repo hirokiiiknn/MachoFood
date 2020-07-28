@@ -1,6 +1,6 @@
 class Tweet < ApplicationRecord
   mount_uploader :image, ImageUploader
-  validates :text,:image,:title, presence: true
+  validates :protein, :carb, :fat, :image, :title, presence: true
   belongs_to :user
   has_many :comments
   has_many :likes, dependent: :destroy
