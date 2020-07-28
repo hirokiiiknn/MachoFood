@@ -8,7 +8,13 @@
             = link_to(content_tag(:i, nil, class: 'fas fa-edit'),edit_tweet_path(@tweet.id),method: :get)
           %li
             = link_to(content_tag(:i, nil, class: 'fas fa-trash-alt'),tweet_path(@tweet.id),method: :delete,data: { confirm: '本当に削除しますか？' }) 
-    %p= @tweet.text
+    .pfc
+      %p1 C :
+      %pF F :
+      %pC P :
+      %p= @tweet.fat
+      %pp= @tweet.carb
+      %ppp= @tweet.protein
     %p2= @tweet.title
     = render partial: 'tweets/tweets', locals: {tweet: @tweet}
     

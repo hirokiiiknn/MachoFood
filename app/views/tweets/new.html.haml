@@ -5,11 +5,11 @@
       //form.htmlタグ名 :カラム名(tweetsテーブルに保存)
       #title= form.text_field :title, placeholder: "title"
       P :
-      %p= form.number_field :text, placeholder: "タンパク質"
+      %p= form.number_field :protein, placeholder: "タンパク質"
       F :
-      %p= form.number_field :text, placeholder: "炭水化物"
+      %p= form.number_field :carb, placeholder: "炭水化物"
       C :
-      %p= form.number_field :text, placeholder: "脂質"
+      %p= form.number_field :fat, placeholder: "脂質"
       = icon('fas', 'image', id: "i")
       = form.file_field :image, class: "image"
       = form.submit

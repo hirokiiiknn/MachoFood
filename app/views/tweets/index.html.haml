@@ -9,9 +9,9 @@
           %p1 C :
           %pF F :
           %pC P :
-          %p= tweet.text 
-          %pp= tweet.text
-          %ppp= tweet.text
+          %p= tweet.fat
+          %pp= tweet.carb
+          %ppp= tweet.protein
         %p2= tweet.title
         %p3= tweet.user.nickname
         = render partial: 'tweets/tweets', locals: {tweet: tweet}
