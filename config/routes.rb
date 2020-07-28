@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   end
   resources :users, only: [:edit,:update, :show]
 
+  post   '/like/:tweet_id' => 'likes#like',   as: 'like'
+  delete '/like/:tweet_id' => 'likes#unlike', as: 'unlike'
+
 end

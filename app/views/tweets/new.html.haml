@@ -4,7 +4,12 @@
     = form_with(model: @tweet, local: true) do |form|
       //form.htmlタグ名 :カラム名(tweetsテーブルに保存)
       #title= form.text_field :title, placeholder: "title"
-      = form.text_area :text, placeholder: "text"
+      P :
+      %p= form.number_field :text, placeholder: "タンパク質"
+      F :
+      %p= form.number_field :text, placeholder: "炭水化物"
+      C :
+      %p= form.number_field :text, placeholder: "脂質"
       = icon('fas', 'image', id: "i")
       = form.file_field :image, class: "image"
       = form.submit
