@@ -7,10 +7,13 @@
       P :
       %p= form.number_field :protein, placeholder: "タンパク質"
       F :
-      %p= form.number_field :carb, placeholder: "炭水化物"
-      C :
       %p= form.number_field :fat, placeholder: "脂質"
-      = icon('fas', 'image', id: "i")
-      = form.file_field :image, class: "image"
+      C :
+      %p= form.number_field :carb, placeholder: "炭水化物"
+      = form.text_area :detail, placeholder: "作り方", class: "form-area"
+      %label.label
+        = icon('fas', 'image')
+        = form.file_field :image, class: "image"
+      
       = form.submit
       %p  <br>STAY HUNGRY BE AESTHETIC
