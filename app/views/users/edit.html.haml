@@ -1,8 +1,17 @@
--# .new-tweet
--#   %h1 ユーザー変更
--#   .new-tweet__content
--#     = form_with model: [@nickname, @introduce] do |form|
--#       #title= form.text_field :nickname, placeholder: "nickname"
--#       = form.text_area :introduce, placeholder: "自己紹介"
--#       = form.submit
-      
+= form_for(current_user) do |f|
+  //アイコン追加部分
+  .account-page__inner--icon
+    .account-page__inner--icon__label
+    .account-page__inner--icon__input
+      - if @image.present?
+        = image_tag @image.url, class: 'account-page__inner--icon__input__image', width: '100%'
+      .account-page__inner--icon__input__image2
+      = f.file_field :image, class: 'account-page__inner--icon__input__btn', id: 'upload-icon'
+    = f.submit "SEND"
+  .account-page__inner--user-form
+    // プロフィール追加部分
+    .field
+      .field-label
+        = f.label :profile
+      .field-input
+        = f.text_area :profile, autocomplete: 'off'

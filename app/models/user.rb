@@ -7,4 +7,6 @@ class User < ApplicationRecord
   has_many :comments
   has_many :likes, dependent: :destroy
   has_many :like_tweets, through: :likes, source: :tweet
+  validates :profile, length: { maximum: 250 }
+  mount_uploader :image, ImageUploader
 end
