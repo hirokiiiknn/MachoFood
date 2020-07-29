@@ -21,13 +21,15 @@
 .contents.row
   %p
   - @tweets.each do |tweet|
-    .content_post{:style => "background-image: url(#{tweet.image});"}
-      .pfc
-        %p1 C :
-        %pF F :
-        %pC P :
-        %p= tweet.fat
-        %pp= tweet.carb
-        %ppp= tweet.protein
-      %p2= tweet.title
-      = render partial: 'tweets/tweets', locals: {tweet: tweet}
+    = link_to tweet_path(tweet.id), method: :get do
+      .content_post{:style => "background-image: url(#{tweet.image});"}
+        .pfc
+          %p1 C :
+          %pF F :
+          %pC P :
+          %p= tweet.fat
+          %pp= tweet.carb
+          %ppp= tweet.protein
+        %p2= tweet.title
+        = render partial: 'tweets/tweets', locals: {tweet: tweet}
+        

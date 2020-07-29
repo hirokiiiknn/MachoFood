@@ -18,14 +18,13 @@ class UsersController < ApplicationController
     @id = user.id
     @nickname = user.nickname
     @tweets = user.tweets
-    @introduce = user.introduce
     @image = user.image
     @profile = user.profile
   end
 
   private
   def user_params
-    params.require(:user).permit(:id,:nickname, :introduce, :tweets, :image, :profile)
+    params.require(:user).permit(:id,:nickname, :tweets, :image, :profile)
   end
 
 end
