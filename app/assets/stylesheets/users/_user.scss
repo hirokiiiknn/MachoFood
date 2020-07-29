@@ -1,0 +1,51 @@
+.account-page__inner--icon{
+  &__input {
+    margin: auto;
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+    overflow: hidden;
+    border: 1px solid black;
+    position: relative;
+    &__image {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &__image2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &__btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      // 解決方法(追加)
+      width: 180px;
+      height: 180px;
+      border-radius: 100px;
+      font-size: 0px;
+      // 解決方法(ここまで)
+      cursor: pointer;
+    }
+  }
+}
+
+.account-page__inner--user-form{
+  .field{
+    .field-input{
+      textarea {
+        margin: auto;
+        width: 400px;
+        height: 150px;
+        background-color: black;
+        color: white;
+        border: solid 1px rgb(150, 150, 150);
+        border-radius: 5px;
+        padding: 10px;
+      }
+    }
+  }
+}
+

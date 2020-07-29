@@ -1,15 +1,51 @@
 .introduce{
-  padding: 20px;
-  display: flex;
-  &__name{
-    font-family: cursive;
-    margin-right: 10px;
-  }
-  &__edit{
-    a{
-      color: black;
-      text-decoration: none;
-    }
+  .content{
+    .userbox{
+      display: flex;
+      &__top{
+        &__left{
+          width: 80px;
+          height: 80px;
+          border-radius: 100px;
+          overflow: hidden;
+          border: 1px solid black;
+          &__icon{
+    
+          }
+        }
+      }
+      .name{
+        .intro{
+          display: flex;
+          font-size: 20px;
+          margin:20px 0px 5px 20px;
+          a{
+            color: black;
+            padding-left: 5px;
+          }
+          
+          .introduce__name{
+          }
+          .introduce__edit{
+            text-decoration: none;
+            }
+      
+        }
 
+        .bottom{
+          p{
+            font-size: 10px;
+
+          }
+          
+      
+        }
+      }
+      
+    }
+    
+    
   }
 }
+
+

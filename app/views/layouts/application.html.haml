@@ -37,6 +37,7 @@
             = form_with(url: search_tweets_path, local: true, method: :get, class: "search-form") do |form|
               = form.text_field :keyword, placeholder: "search", class: "search-input"
               = form.submit "SEND", class: "search-btn"
+              
 
     = yield
     -# .footer

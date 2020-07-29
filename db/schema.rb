@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_28_075726) do
+ActiveRecord::Schema.define(version: 2020_07_28_084134) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 2020_07_28_075726) do
   end
 
   create_table "tweets", force: :cascade do |t|
-    t.string "text"
     t.text "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -40,7 +39,7 @@ ActiveRecord::Schema.define(version: 2020_07_28_075726) do
     t.integer "likes_count"
     t.integer "fat"
     t.integer "carb"
-    t.index ["text"], name: "index_tweets_on_text"
+    t.integer "protein"
   end
 
   create_table "users", force: :cascade do |t|
@@ -53,6 +52,8 @@ ActiveRecord::Schema.define(version: 2020_07_28_075726) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "nickname"
     t.string "introduce"
+    t.string "image"
+    t.text "profile"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
