@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-  before_action :hoge_tweet, only: [:edit, :show]
+  before_action :hoge_tweet, except: [:index, :new, :create, :search]
   before_action :move_to_index, except: [:index, :show, :search]
 
   def index
@@ -33,7 +33,7 @@ class TweetsController < ApplicationController
   end
 
   def search
-    @tweets = Tweet.search(params[:keyword])
+    @tweets = Tweet.where("title LIKE ?", "%#{params[:keyword]}%")
     respond_to do |format|
       format.html
       format.json 
