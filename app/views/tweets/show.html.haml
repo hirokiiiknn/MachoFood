@@ -7,10 +7,10 @@
           %li
             = link_to(content_tag(:i, nil, class: 'fas fa-edit'),edit_tweet_path(@tweet.id),method: :get)
           %li
-            = link_to(content_tag(:i, nil, class: 'fas fa-trash-alt'),tweet_path(@tweet.id),method: :delete,data: { confirm: '本当に削除しますか？' }) 
+            = link_to(content_tag(:i, nil, class: 'fas fa-trash-alt'),tweet_path(@tweet.id),method: :delete,data: { confirm: '本当に削除しますか？' })
     .pfc
-      %p1 C :
-      %pF F :
+      %pF C :
+      %p1 F :
       %pC P :
       %p= @tweet.fat
       %pp= @tweet.carb

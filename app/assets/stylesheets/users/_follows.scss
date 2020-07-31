@@ -1,0 +1,29 @@
+.follows{
+  
+  &__detail{
+    display: flex;
+    span{
+      padding-right: 10px;
+    }
+    name{
+      font-weight: bold;
+    }
+    a{
+      padding-right: 10px;
+      text-decoration: none;
+      color: black;
+    }
+    .alreadyfollowed{
+      border: 1px solid black;
+      border-radius: 5px;
+      font-size: 15px;
+      padding-left: 3px;
+    }
+    .following{
+      background-color: #0091ff;
+      border-radius: 5px;
+      font-size: 15px;
+      padding-left: 3px;
+    }
+  }
+}

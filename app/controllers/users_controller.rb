@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
 
+  before_action :authenticate_user!
+  def index
+    @users = User.all
+  end
+
   def edit
     user = User.find(params[:id])
     @image = user.image
@@ -14,12 +19,22 @@ class UsersController < ApplicationController
   end
   
   def show
+    @user = User.find(params[:id])
+    @id = @user.id
+    @nickname = @user.nickname
+    @tweets = @user.tweets
+    @image = @user.image
+    @profile = @user.profile
+  end
+
+  def follows
     user = User.find(params[:id])
-    @id = user.id
-    @nickname = user.nickname
-    @tweets = user.tweets
-    @image = user.image
-    @profile = user.profile
+    @users = user.followings
+  end
+
+  def followers
+    user = User.find(params[:id])
+    @users = user.followers
   end
 
   private
