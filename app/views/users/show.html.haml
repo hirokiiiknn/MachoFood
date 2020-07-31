@@ -14,9 +14,19 @@
           .introduce__edit
           = link_to edit_user_path do
             %i.fas.fa-user-edit
+          .follow
+            .following
+              %p= link_to "follow", follows_user_path(@user.id)
+              = link_to follows_user_path(@user) do
+                = @user.followings.count
+            .follower
+              %p= link_to "follower", followers_user_path(@user.id)
+              = link_to followers_user_path(@user) do
+                = @user.followers.count
+
         .bottom
         = simple_format(@profile)
-    
+        
 
 .contents.row
   %p
@@ -24,12 +34,17 @@
     = link_to tweet_path(tweet.id), method: :get do
       .content_post{:style => "background-image: url(#{tweet.image});"}
         .pfc
-          %p1 C :
-          %pF F :
+          %p1 F :
+          %pF C :
           %pC P :
           %p= tweet.fat
           %pp= tweet.carb
           %ppp= tweet.protein
         %p2= tweet.title
         = render partial: 'tweets/tweets', locals: {tweet: tweet}
-        
+        - if current_user != @user
+          - if @user.followed_by?(current_user)
+            %p= link_to "フォロー済み", user_relationships_path(@user.id), method: :delete
+          - else
+            %p= link_to "フォローする", user_relationships_path(@user.id), method: :post
+          
