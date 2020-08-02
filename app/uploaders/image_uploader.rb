@@ -15,7 +15,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   
 
  # 画像の上限を700pxにする
-  process :resize_to_limit => [700, 700]
+  process :resize_to_limit => [800, 800]
 
   # 保存形式をJPGにする
   process :convert => 'jpg'
