@@ -3,7 +3,6 @@ $(function() {
   function appendTweet(tweet){
     if (tweet.user_sign_in && tweet.user_sign_in.id == tweet.user_id){
       let html = `
-                  <a data-method="get" href="/tweets/${tweet.id}"></a>
                   <div class="content_post" style="background-image: url(${tweet.image});">
                     <a data-method="get" href="/tweets/${tweet.id}">
                       <div class="pfc">
@@ -31,7 +30,6 @@ $(function() {
       search_list.append(html);
     } else {
       let html = `
-                  <a data-method="get" href="/tweets/${tweet.id}"></a>
                   <div class="content_post" style="background-image: url(${tweet.image});">
                     <a data-method="get" href="/tweets/${tweet.id}">
                       <div class="pfc">

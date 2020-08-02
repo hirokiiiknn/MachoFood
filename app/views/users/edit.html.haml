@@ -7,11 +7,18 @@
         = image_tag @image.url, class: 'account-page__inner--icon__input__image', width: '100%'
       .account-page__inner--icon__input__image2
       = f.file_field :image, class: 'account-page__inner--icon__input__btn', id: 'upload-icon'
-    = f.submit "SEND"
   .account-page__inner--user-form
     // プロフィール追加部分
     .field
       .field-label
         = f.label :profile
       .field-input
-        = f.text_area :profile, autocomplete: 'off'
+        = f.text_area :profile, autocomplete: 'off', class: "profle"
+        .field-input__sns
+          %p 他のアカウント情報
+          %insta= f.text_field :instagram, placeholder: "Instagram"
+          %facebook= f.text_field :facebook, placeholder: "facebook"
+          %twitter= f.text_field :twitter, placeholder: "twitter"
+        = f.submit "SEND"
+
+        

@@ -1,24 +1,33 @@
-# README
+# Macho-Food
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+"Macho-Food" is an application where people who love working out or would love to be healthy, share their foods they make.
 
-Things you may want to cover:
+# DEMO
 
-* Ruby version
+You can learn how to use it.
 
-* System dependencies
+![](https://gyazo.com/2ed03513661346009a1779f22fa31935)
 
-* Configuration
+# Features
 
-* Database creation
+Tweet, Like and Comment, Follow, Unfollow etc...
 
-* Database initialization
+# Requirement
 
-* How to run the test suite
+* Ruby 2.6.5
 
-* Services (job queues, cache servers, search engines, etc.)
+# Installation
 
-* Deployment instructions
+```zsh
+rails _6.0.0_ new macho-food -d postgresql
+```
 
-* ...
+# Usage
+
+You can browse a lot of healthy foods and any foods which are suitable for building muscles. You can also make them by reading their article easily and quickly. Also upload any foods that you want to share to the world
+
+# Author
+
+* HirokiKato
+
+Thank you!

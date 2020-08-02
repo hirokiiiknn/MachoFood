@@ -27,3 +27,36 @@
     }
   }
 }
+
+.sns{
+  display: flex;
+  
+  .instagram{
+  a{
+    i{
+      background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+      background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+      padding-left: 1px;
+      padding-right: 1px;
+      border-radius: 5px;
+      color: white;
+    }
+  }
+  }
+  .facebook{
+    a{
+      i{
+        color: #1877f2;
+      }
+    }
+
+  }
+  .twitter{
+    a{
+      i{
+        color:#1DA1F2;
+      }
+    }
+
+  }
+}

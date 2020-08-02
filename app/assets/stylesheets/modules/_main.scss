@@ -1,10 +1,12 @@
 .header{
-  background-color: black;
+  background: -moz-linear-gradient(top, #FFC778, #FFF);
+  background: -webkit-linear-gradient(top, #FFC778, #FFF);
+  background: linear-gradient(to bottom, #FFC778, #FFF);
   display: flex;
   justify-content: space-between;
   &__child{
-    background-color: khaki;
     padding: 10px;
+    
     &--logo{
       a{
         text-decoration: none;
@@ -37,11 +39,11 @@
           font-size: 18px;
           margin-right: 15px;
           nickname{
-            color: white;
+            color: black;
           }
           a{
             text-decoration: none;
-            color: white;
+            color: black;
           }
         }
         logout{
@@ -49,7 +51,7 @@
           padding-right: 10px;
           a{
             text-decoration: none;
-            color: white;
+            color: black;
           }
         }
       }
@@ -62,6 +64,11 @@
           color: white;
           margin-right: 20px;
         }
+      }
+      .icons{
+        font-family: 'Ranchers', cursive;
+        font-family: 'Rowdies', cursive;
+        font-family: 'Staatliches', cursive;
       }
     }
   }
@@ -91,12 +98,18 @@ ul li {
   }
   i{
     font-size: 44px;
-    background-color: lawngreen;
+    background: -moz-linear-gradient(top, #78ff78, #FFF);
+    background: -webkit-linear-gradient(top, #78ff7f, #FFF);
+    background: linear-gradient(to bottom, #78ff8c, #FFF);
     padding: 19px;
+    border-radius: 20px;
   }
 
 
 }
+.back {
+}
+
 @media screen and (min-width:600px){
 .row {
   width: 100%;

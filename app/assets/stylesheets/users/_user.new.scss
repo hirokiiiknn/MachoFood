@@ -1,15 +1,23 @@
 .new{
   text-align: center;
   font-size: 30px;
-  background-color: lightseagreen;
-  border-radius: 20px;
-  margin: 50px;
+  
+  text-align: center;
+  color: black;
   font-family: 'Ranchers', cursive;
   font-family: 'Rowdies', cursive;
   font-family: 'Staatliches', cursive;
   .new_form{
+    margin-bottom: 10px;
+    background: -moz-linear-gradient(25deg, rgba(255, 190, 44, 0.4), rgba(255, 44, 171, 0.7)),url(https://cdn1.coachmag.co.uk/sites/coachmag/files/styles/16x9_480/public/2019/06/vitamins-to-build-muscle.jpg?itok=iukH9Ony&timestamp=1561652028);
+    background: -webkit-linear-gradient(25deg, rgba(255, 190, 44, 0.4), rgba(255, 44, 171, 0.7)),url(https://cdn1.coachmag.co.uk/sites/coachmag/files/styles/16x9_480/public/2019/06/vitamins-to-build-muscle.jpg?itok=iukH9Ony&timestamp=1561652028);
+    background: linear-gradient(25deg, rgba(255, 190, 44, 0.4), rgba(255, 44, 171, 0.7)),url(https://cdn1.coachmag.co.uk/sites/coachmag/files/styles/16x9_480/public/2019/06/vitamins-to-build-muscle.jpg?itok=iukH9Ony&timestamp=1561652028);
+    background-size:cover;
+    border-radius: 20px;
     h2{
-      font-size: 50px;
+      font-size: 80px;
+      
+
 
     }
   }

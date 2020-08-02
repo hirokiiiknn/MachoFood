@@ -1,27 +1,27 @@
-
-.recipe
-  %i.fas.fa-utensils
-  %h1 recipes
-  
-.contents.row
-  - @tweets.each do |tweet| 
-    = link_to tweet_path(tweet.id), method: :get do
-      .content_post{:style => "background-image: url(#{tweet.image});"}
-        .pfc
-          %p1 F :
-          %pF C :
-          %pC P :
-          %p= tweet.fat
-          %pp= tweet.carb
-          %ppp= tweet.protein
-        %p2= tweet.title
-        %p3= tweet.user.nickname
-        = render partial: 'tweets/tweets', locals: {tweet: tweet}
-        .follow
-          - if user_signed_in?
-            - if current_user != tweet.user
-              - if tweet.user.followed_by?(current_user)
-                %p= link_to "フォロー済み", user_relationships_path(tweet.user.id), method: :delete
-              - else
-                %p= link_to "フォローする", user_relationships_path(tweet.user.id), method: :post
-        
+.back
+  .recipe
+    %i.fas.fa-utensils
+    %h1 recipes
+    
+  .contents.row
+    - @tweets.each do |tweet| 
+      = link_to tweet_path(tweet.id), method: :get do
+        .content_post{:style => "background-image: url(#{tweet.image});"}
+          .pfc
+            %p1 F :
+            %pF C :
+            %pC P :
+            %p= tweet.fat
+            %pp= tweet.carb
+            %ppp= tweet.protein
+          %p2= tweet.title
+          %p3= tweet.user.nickname
+          = render partial: 'tweets/tweets', locals: {tweet: tweet}
+          .follow
+            - if user_signed_in?
+              - if current_user != tweet.user
+                - if tweet.user.followed_by?(current_user)
+                  %p= link_to "フォロー済み", user_relationships_path(tweet.user.id), method: :delete
+                - else
+                  %p= link_to "フォローする", user_relationships_path(tweet.user.id), method: :post
+          
