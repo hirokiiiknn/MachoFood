@@ -60,3 +60,5 @@ gem 'rmagick'
 gem 'devise'
 gem 'jquery-rails'
 gem 'mini_magick'
+
+gem 'rails_12factor', group: :production
