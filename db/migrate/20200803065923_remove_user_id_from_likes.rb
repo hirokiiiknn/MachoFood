@@ -3,3 +3,4 @@ class RemoveUserIdFromLikes < ActiveRecord::Migration[6.0]
     remove_column :likes, :user_id, :integer
   end
 end
+ 
