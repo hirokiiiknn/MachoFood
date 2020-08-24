@@ -14,11 +14,11 @@
         = f.label :profile
       .field-input
         = f.text_area :profile, autocomplete: 'off', class: "profle"
-        .field-input__sns
-          %p 他のアカウント情報
-          %insta= f.text_field :instagram, placeholder: "Instagram"
-          %facebook= f.text_field :facebook, placeholder: "facebook"
-          %twitter= f.text_field :twitter, placeholder: "twitter"
+        -# .field-input__sns
+        -#   %p 他のアカウント情報
+        -#   %insta= f.text_field :instagram, placeholder: "Instagram"
+        -#   %facebook= f.text_field :facebook, placeholder: "facebook"
+        -#   %twitter= f.text_field :twitter, placeholder: "twitter"
         = f.submit "SEND"
 
         

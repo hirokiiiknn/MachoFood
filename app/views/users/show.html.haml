@@ -23,16 +23,16 @@
               %p= link_to "follower", followers_user_path(@user.id)
               = link_to followers_user_path(@user) do
                 = @user.followers.count
-          .sns
-            .instagram
-              =link_to "#{@user.instagram}" do
-                %i.fab.fa-instagram
-            .facebook
-              =link_to "#{@user.facebook}" do
-                %i.fab.fa-facebook
-            .twitter
-              =link_to "#{@user.twitter}" do
-                %i.fab.fa-twitter
+          -# .sns
+          -#   .instagram
+          -#     =link_to "#{@user.instagram}" do
+          -#       %i.fab.fa-instagram
+          -#   .facebook
+          -#     =link_to "#{@user.facebook}" do
+          -#       %i.fab.fa-facebook
+          -#   .twitter
+          -#     =link_to "#{@user.twitter}" do
+          -#       %i.fab.fa-twitter
 
         .bottom
         = simple_format(@profile)
