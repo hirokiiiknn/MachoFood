@@ -43,7 +43,7 @@ class TweetsController < ApplicationController
   
   private
   def tweet_params
-    params.require(:tweet).permit(:protein,:carb,:fat,:detail, :image, :title, :likes_count).merge(user_id: current_user.id)
+    params.require(:tweet).permit(:id, :protein,:carb,:fat,:detail, :image, :title, :likes_count).merge(user_id: current_user.id)
   end
 
   def hoge_tweet
