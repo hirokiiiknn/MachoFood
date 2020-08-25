@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   class MyLogger < Logger
+    include ActiveSupport::LoggerSilence
     include LoggerSilence
     include ActiveSupport::LoggerThreadSafeLevel
   end
