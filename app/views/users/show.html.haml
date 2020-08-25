@@ -6,7 +6,7 @@
           // アイコン表示部分
           .userbox__top__left__icon
             -if @image.present?
-              = image_tag @image.url, width: '100%'
+              = image_tag @image.url, width: '100%', class: "userbox__top__left__icon--image"
       .name
         .intro
           .introduce__name

@@ -1,16 +1,19 @@
 .account-page__inner--icon{
   &__input {
-    margin: auto;
-    width: 180px;
-    height: 180px;
-    border-radius: 100px;
+    width:110px;
+    height:110px;
+    border-radius:50%;
     overflow: hidden;
     border: 1px solid black;
     position: relative;
     &__image {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      height:100%;
     }
     &__image2 {
       position: absolute;

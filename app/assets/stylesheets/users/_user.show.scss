@@ -4,13 +4,22 @@
       display: flex;
       &__top{
         &__left{
-          width: 80px;
-          height: 80px;
-          border-radius: 100px;
-          overflow: hidden;
-          border: 1px solid black;
           &__icon{
-    
+            width:110px;
+            height:110px;
+            border-radius:50%;
+            overflow: hidden;
+            border: 1px solid black;
+            position: relative;
+            &--image{
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              height:100%;
+            }
           }
         }
       }
