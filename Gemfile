@@ -61,5 +61,5 @@ gem 'devise'
 gem 'jquery-rails'
 gem 'mini_magick'
 gem 'fog-aws'
-
+gem "aws-sdk-s3", require: false #追記
 gem 'rails_12factor', group: :production
