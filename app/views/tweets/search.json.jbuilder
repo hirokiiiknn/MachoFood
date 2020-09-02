@@ -2,7 +2,7 @@ json.array! @tweets do |tweet|
   json.id tweet.id
   json.title tweet.title
   json.text tweet.text
-  json.image tweet.image
+  json.image tweet.image.url
   json.detail tweet.detail
   json.protein tweet.protein
   json.carb tweet.carb

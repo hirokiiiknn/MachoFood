@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
-  # get 'relationships/create'
-  # get 'relationships/destroy'
   root to: 'tweets#index'
   devise_for :users
   resources :tweets do
     resources :comments, only: :create
-    # resources :likes, only: [:like, :unlike,:set_variables]
     collection do
       get 'search'
     end
