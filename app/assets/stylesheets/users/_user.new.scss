@@ -1,24 +1,48 @@
 .new{
-  text-align: center;
-  font-size: 30px;
-  
-  text-align: center;
-  color: black;
-  font-family: 'Ranchers', cursive;
-  font-family: 'Rowdies', cursive;
-  font-family: 'Staatliches', cursive;
+  background-color: #efefee;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   .new_form{
-    margin-bottom: 10px;
-    background: -moz-linear-gradient(25deg, rgba(255, 190, 44, 0.4), rgba(255, 44, 171, 0.7)),url(https://cdn1.coachmag.co.uk/sites/coachmag/files/styles/16x9_480/public/2019/06/vitamins-to-build-muscle.jpg?itok=iukH9Ony&timestamp=1561652028);
-    background: -webkit-linear-gradient(25deg, rgba(255, 190, 44, 0.4), rgba(255, 44, 171, 0.7)),url(https://cdn1.coachmag.co.uk/sites/coachmag/files/styles/16x9_480/public/2019/06/vitamins-to-build-muscle.jpg?itok=iukH9Ony&timestamp=1561652028);
-    background: linear-gradient(25deg, rgba(255, 190, 44, 0.4), rgba(255, 44, 171, 0.7)),url(https://cdn1.coachmag.co.uk/sites/coachmag/files/styles/16x9_480/public/2019/06/vitamins-to-build-muscle.jpg?itok=iukH9Ony&timestamp=1561652028);
-    background-size:cover;
-    border-radius: 20px;
+    margin-top: 50px;
+    background-color: #fff;
+    min-height: 300px;
+    max-height: 100%;
+    width: 450px;
+    box-shadow: rgba(0,0,0, 0.1) 0 1px 2px;
+    padding: 20px 35px;
+    overflow-y: auto;
     h2{
-      font-size: 80px;
-      
-
-
+      font-size: 40px;
     }
+    .new_user{
+      text-align: center;
+      margin-top: 50px;
+      .form{
+        display: flex;
+        flex-direction: column;
+        padding-top: 24px;
+        .field{
+          font-size: 14px;
+          margin: 10px 0;
+          border: none;
+          border-bottom: 1px solid #dedede;
+        }
+        .actions{
+          background-color: #4285f4;
+          color: #fff;
+          height: 36px;
+          width: 88px;
+          border: none;
+          border-radius: 3px;
+          font-weight: 500;
+          margin-top: 10px;
+          margin-bottom: 20px;
+          font-size: 16px;
+        }
+      }
+    }
+    
   }
 }

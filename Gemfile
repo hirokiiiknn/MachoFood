@@ -63,3 +63,8 @@ gem 'mini_magick'
 gem 'fog-aws'
 
 gem 'rails_12factor', group: :production
+
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-facebook'
+gem 'dotenv-rails'
