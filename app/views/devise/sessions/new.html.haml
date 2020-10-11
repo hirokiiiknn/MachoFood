@@ -1,7 +1,16 @@
 .new
   .new_form
-    %h2 Log in
-    
+    %h2 ログイン
+    .auth
+      = link_to user_facebook_omniauth_authorize_path do
+        .facebook 
+          %i.fab.fa-facebook 
+          %p faceboookでログイン
+      <br>
+      = link_to user_google_oauth2_omniauth_authorize_path do
+        .google
+          %i.fab.fa-google 
+          %p googleでログイン
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
       .form
         .field
@@ -17,12 +26,6 @@
             = f.check_box :remember_me
             = f.label :remember_me
         .actions
-          = f.submit "Log in"
+          = f.submit "ログイン"
     = render "devise/shared/links"
 
-= link_to user_facebook_omniauth_authorize_path do
-  %h1 facebook
-  %i.fab.fa-meetup
-= link_to user_google_oauth2_omniauth_authorize_path do
-  %h1 google
-  %i.fab.fa-meetup

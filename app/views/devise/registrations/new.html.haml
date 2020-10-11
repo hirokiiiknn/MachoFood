@@ -1,7 +1,19 @@
 .new
   .new_form
-    %h2 Sign up
+    %h2 サインイン
+    .auth
+      = link_to user_facebook_omniauth_authorize_path do
+        .facebook 
+          %i.fab.fa-facebook 
+          %p faceboookで登録する
+      <br>
+      = link_to user_google_oauth2_omniauth_authorize_path do
+        .google
+          %i.fab.fa-google 
+          %p googleで登録する
+    
     = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      %h3 下記メールアドレスで登録する⬇️
       = render "devise/shared/error_messages", resource: resource
       .form
         .field
@@ -25,11 +37,8 @@
           %br/
           = f.password_field :password_confirmation, autocomplete: "new-password"
         .actions
-          = f.submit "Sign up"
+          = f.submit "登録"
     = render "devise/shared/links"
 
-= link_to user_facebook_omniauth_authorize_path do
-  %i.fab.fa-facebook
-= link_to user_google_oauth2_omniauth_authorize_path do
-  %i.fab.fa-google
+
 

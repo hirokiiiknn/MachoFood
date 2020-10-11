@@ -15,10 +15,52 @@
     overflow-y: auto;
     h2{
       font-size: 40px;
+      margin-bottom: 20px;
     }
+    .auth{
+      text-align: center;
+      a{
+        text-decoration: none;
+        .facebook{
+          display: flex;
+          background-color: rgb(56, 81, 133);
+          color: #fff;
+          padding: 10px;
+          border-radius: 4px;
+          width: 150px;
+          
+          i{
+            margin-right: 15px;
+          }
+          p{
+            font-size: 8px;
+          }
+          
+        }
+        .google{
+          display: flex;
+          background-color: #F5F5F5;
+          color: #333333;
+          padding: 10px;
+          border-radius: 4px;
+          width: 150px;
+          border: 1px solid #333333;
+          
+          i{
+            margin-right: 15px;
+          }
+          p{
+            font-size: 8px;
+          }
+          
+        }
+      }
+    }
+      
     .new_user{
       text-align: center;
       margin-top: 50px;
+      
       .form{
         display: flex;
         flex-direction: column;
@@ -28,21 +70,31 @@
           margin: 10px 0;
           border: none;
           border-bottom: 1px solid #dedede;
+          input{
+            border: none;
+            width: 100%;
+          }
         }
-        .actions{
+        .actions, [type="submit"]{
           background-color: #4285f4;
           color: #fff;
           height: 36px;
-          width: 88px;
+          width: 100px;
           border: none;
           border-radius: 3px;
           font-weight: 500;
-          margin-top: 10px;
           margin-bottom: 20px;
           font-size: 16px;
+          cursor: pointer;
+          
         }
       }
     }
     
   }
+}
+
+
+a{
+  text-decoration: none;
 }
