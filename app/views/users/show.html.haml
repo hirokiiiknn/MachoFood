@@ -33,6 +33,8 @@
           -#   .twitter
           -#     =link_to "#{@user.twitter}" do
           -#       %i.fab.fa-twitter
+          .side-bar__group__list
+            = link_to "いいねした商品", like_path(@user)
 
         .bottom
         = simple_format(@profile)
