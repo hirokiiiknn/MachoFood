@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   post   '/like/:tweet_id' => 'likes#like',   as: 'like'
   delete '/like/:tweet_id' => 'likes#unlike', as: 'unlike'
 
+
+
   resources :users do
     resource :relationships, only: [:create, :destroy]
     get :follows, on: :member # 追加

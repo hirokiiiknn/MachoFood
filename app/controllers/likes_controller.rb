@@ -11,6 +11,7 @@ class LikesController < ApplicationController
     like.destroy
   end
 
+
   private
 
   def set_variables
