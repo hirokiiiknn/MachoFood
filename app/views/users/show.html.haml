@@ -24,6 +24,13 @@
               %p= link_to "follower", followers_user_path(@user.id)
               = link_to followers_user_path(@user) do
                 = @user.followers.count
+            - if current_user != @user
+              - if @user.followed_by?(current_user)
+                %p= link_to "フォロー済み", user_relationships_path(@user.id), method: :delete
+              - else
+                %p= link_to "フォローする", user_relationships_path(@user.id), method: :post
+          
+
             
 
         .bottom
@@ -44,9 +51,4 @@
           %ppp= tweet.protein
         %p2= tweet.title
         = render partial: 'tweets/tweets', locals: {tweet: tweet}
-        - if current_user != @user
-          - if @user.followed_by?(current_user)
-            %p= link_to "フォロー済み", user_relationships_path(@user.id), method: :delete
-          - else
-            %p= link_to "フォローする", user_relationships_path(@user.id), method: :post
-          
+        
