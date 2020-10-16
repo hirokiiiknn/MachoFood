@@ -12,8 +12,9 @@
           .introduce__name
           = @nickname
           .introduce__edit
-          = link_to edit_user_path do
-            %i.fas.fa-user-edit
+          -if current_user.id == @user.id
+            = link_to edit_user_path do
+              %i.fas.fa-user-edit
           .follow
             .following
               %p= link_to "follow", follows_user_path(@user.id)
