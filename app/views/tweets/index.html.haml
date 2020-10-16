@@ -15,7 +15,7 @@
             %pp= tweet.carb
             %ppp= tweet.protein
           %p2= tweet.title
-          %p3= tweet.user.nickname
+          .userArea= link_to tweet.user.nickname, user_path(tweet.user.id)
           = render partial: 'tweets/tweets', locals: {tweet: tweet}
           .follow
             - if user_signed_in?

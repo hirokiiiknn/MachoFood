@@ -126,6 +126,9 @@ ul li {
   a{
     text-decoration: none;
   }
+  a:hover{
+    opacity: 0.8;
+  }
 }
 
 .content_post {
@@ -139,7 +142,16 @@ ul li {
   background-position: center center;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(41,41,41,0.2);
-
+  .userArea{
+    a{
+      font-size: 15px;
+      color: black;
+      letter-spacing: 3px;
+      text-shadow: 0 0 2px #fff, 0 0 1px #fff, 0 0 1px #fff;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+    
+  }
   p {
     font-size: 20px;
     position: absolute;
@@ -170,14 +182,6 @@ ul li {
     right: 20px;
     font-size: 20px;
     text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000;
-  }
-  p3{
-    background: linear-gradient(to right, lightgrey, white);
-    font-size: 20px;
-    border-radius: 10px;
-    color: black;
-    letter-spacing: 3px;
-    text-shadow: 0 0 2px #fff, 0 0 1px #fff, 0 0 1px #fff;
   }
   pp {
     font-size: 20px;
