@@ -27,14 +27,18 @@ class UsersController < ApplicationController
     @profile = @user.profile
   end
 
-  def follows
-    user = User.find(params[:id])
-    @users = user.followings
+  def following
+    #@userがフォローしているユーザー
+    @user  = User.find(params[:id])
+    @users = @user.following
+    render partial: 'show_follow'
   end
 
   def followers
-    user = User.find(params[:id])
-    @users = user.followers
+    #@userをフォローしているユーザー
+    @user  = User.find(params[:id])
+    @users = @user.followers
+    render partial: 'show_follower'
   end
 
   private

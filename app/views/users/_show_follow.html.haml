@@ -1,0 +1,7 @@
+.followDetails
+  - @users.each do |user|
+    %hr/
+    .followDetails__one
+      %span nickname:
+      %name= link_to user.nickname, user_path(user.id)
+      

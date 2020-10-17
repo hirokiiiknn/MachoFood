@@ -41,34 +41,52 @@
           .introduce__edit{
             text-decoration: none;
           }
+
+          font-family: 'Ranchers', cursive;
+          font-family: 'Rowdies', cursive;
+          font-family: 'Staatliches', cursive;
           .follow{
-            display: flex;
+
             font-size: 15px;
-            font-family: 'Ranchers', cursive;
-            font-family: 'Rowdies', cursive;
-            font-family: 'Staatliches', cursive;
-            
-            .following{
-              background-color: khaki;
-              padding: 15px;
-              margin-right: 5px;
-              border-radius: 20px;
-              display: flex;
-              
-            }
-            .follower{
-              background-color: khaki;
-              padding: 15px;
-              margin-right: 5px;
-              border-radius: 20px;
-              display: flex;
-            }
-            .followOrUnfollow{
-              background-color: #0091ff;
-              padding: 15px;
-              margin-right: 5px;
-              border-radius: 20px;
-              display: flex;
+            background-color: khaki;
+            padding: 15px;
+            margin-right: 5px;
+            border-radius: 20px;
+            display: flex;
+          }
+          .follower{
+            margin-left: 10px;
+            font-size: 15px;
+            background-color: khaki;
+            padding: 15px;
+            margin-right: 5px;
+            border-radius: 20px;
+            display: flex;
+          }
+          .form{
+            border-radius: 4px;
+            margin-left: 4px;
+            #follow_form{
+              .edit_user{
+                .btn-outline-secondary{
+                  border: 1px solid #fefefe;
+                  font-size: 15px;
+                  border-radius: 6px;
+                  margin-top: 6px;
+                  padding: 7px;
+                  cursor: pointer;
+  
+                }
+                .btn-outline-secondary2{
+                  background-color: rgb(85, 172, 238);
+                  font-size: 15px;
+                  border-radius: 6px;
+                  margin-top: 6px;
+                  padding: 7px;
+                  cursor: pointer;
+  
+                }
+              }
             }
 
           }

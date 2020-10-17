@@ -1,0 +1,2 @@
+= form_for(current_user, url: relationship_path(@user), method: :delete, remote: true) do |f|
+  = f.submit "フォロー中", class: "btn btn-outline-secondary"

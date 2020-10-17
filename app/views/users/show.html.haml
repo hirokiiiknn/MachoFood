@@ -15,22 +15,17 @@
           -if current_user.id == @user.id
             = link_to edit_user_path do
               %i.fas.fa-user-edit
+          .follower
+            = link_to followers_user_path(@user.id) do
+              %h5{:style => "color: black;"}
+                フォロワー#{@user.followers.count}人
           .follow
-            .following
-              %p= link_to "follow", follows_user_path(@user.id)
-              = link_to follows_user_path(@user) do
-                = @user.followings.count
-            .follower
-              %p= link_to "follower", followers_user_path(@user.id)
-              = link_to followers_user_path(@user) do
-                = @user.followers.count
-            .followOrUnfollow
-              - if current_user != @user
-                - if @user.followed_by?(current_user)
-                  %p= link_to "フォロー中", user_relationships_path(@user.id), method: :delete
-                - else
-                  %p= link_to "フォローする", user_relationships_path(@user.id), method: :post
-              - elsif current_user == @user
+            = link_to following_user_path(@user.id) do
+              %h5{:style => "color: black;"}
+                フォロー#{@user.following.count}人
+          .form
+            = render "follow_form"
+
                 
 
             
